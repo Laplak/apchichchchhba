@@ -4,6 +4,24 @@ import sys
 import random
 
 
+class CollideLines(pygame.sprite.Sprite):
+    def __init__(self, collide_lines_location):
+        super().__init__(collide_lines)
+        self.rect = pygame.Rect(90, 347, 5, 90)
+        self.image = pygame.Surface([5, 100])
+        self.collide_lines_location = collide_lines_location
+
+        if collide_lines_location == 1:
+            self.rect.y = 347
+            self.rect.x = 90
+        elif collide_lines_location == 2:
+            self.rect.x = 907
+            self.rect.y = 150
+
+    def update(self, y_pos):
+        self.rect.y = y_pos
+
+
 class Border(pygame.sprite.Sprite):
     def __init__(self, location):
 
