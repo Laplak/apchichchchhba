@@ -1,7 +1,7 @@
 # Импорт библиотеки
 import sqlite3
 # Подключение к БД
-con = sqlite3.connect("userRecords.db")
+con = sqlite3.connect("my_userRecords.db")
 
 # Создание курсора
 cur = con.cursor()
